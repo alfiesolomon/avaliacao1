@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class primeiraavaliacao {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sn = new Scanner(System.in);
+		System.out.println("Calculo: Média de Aprovação");
+        
+        System.out.print("Digite a nota da prova");
+		int notaProva = sn.nextInt();
+        
+        System.out.print("Digite a nota do projeto");
+		int notaProjeto = sn.nextInt();
+        
+        System.out.print("Digite a nota da lista de exercicios");
+		int notaExerc = sn.nextInt();
+        
+        System.out.print("Digite a nota de contribuicao de projetos recomendados");
+		int notaContrib = sn.nextInt();
+		int media = ((notaProva*3) + (notaProjeto*3) + (notaExerc*2) + (notaContrib*3))/10; 
+        
+    System.out.println("Sua media foi de "+media);
+        
+        
+        if (media >= 8) {
+			System.out.print("Parabens! Voce foi aprovado! Sua media semestral foi de "+media);
+		} else {
+			System.out.print("Você não atingiu a nota média suficiente para ser aprovado. Sua nota media foi "+media);
+		}
+	}
+
+}
